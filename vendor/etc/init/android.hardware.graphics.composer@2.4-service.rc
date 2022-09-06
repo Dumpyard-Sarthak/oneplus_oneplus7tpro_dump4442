@@ -1,0 +1,13 @@
+service vendor.hwcomposer-2-4 /vendor/bin/hw/android.hardware.graphics.composer@2.4-service
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    # ifdef VENDOR_EDIT
+    # wei.wang@ASTI, 2019/10/10, [ITN-829] Improve sf performance
+    writepid /dev/cpuset/display/tasks
+    # else
+    # writepid /dev/cpuset/system-background/tasks
+    # endif /* VENDOR_EDIT */
+    socket pps stream 0660 system system
