@@ -1,0 +1,43 @@
+#ifdef OPLUS_FEATURE_HAPTIC_VIBRATE
+service hapticImgScreencap    /system_ext/bin/hapticscreencap
+	class main
+	user  root
+	group root
+	disabled
+
+service hapticGetEvent    /system_ext/bin/getevent
+	class main
+	user  root
+	group root
+	disabled
+
+service hapticQqFly    /system_ext/bin/hapticscreencap 1
+	class main
+	user  root
+	group root
+	disabled
+
+service hapticWildRacing    /system_ext/bin/hapticscreencap 2
+	class main
+	user  root
+	group root
+	disabled
+
+service hapticPeaceElite   /system_ext/bin/hapticscreencap 3
+	class main
+	user  root
+	group root
+	disabled
+
+service hapticPeaceEliteImage   /system_ext/bin/hapticscreencap 4
+	class main
+	user  root
+	group root
+	disabled
+
+service hapticCallOfDuty   /system_ext/bin/hapticscreencap 5
+	class main
+	user  root
+	group root
+	disabled
+#endif
